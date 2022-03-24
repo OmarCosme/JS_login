@@ -1,0 +1,289 @@
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(206, 218, 255);
+  }
+
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.divSesion{
+    width: 500px;
+    height: 400px;
+    background: rgba(128, 128, 128, 0.233);
+    border-radius: 40px;
+    overflow: hidden;
+}
+.bordeAzul{
+    position: relative;
+    width: 100%;
+    height: 100px;
+/*    background: rgb(9, 0, 129); */
+    overflow: hidden;
+    background: rgb(9, 0, 129);
+    background-size: 94px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.bordeAzul h2{
+    position: relative;
+    color: white;
+    top: -8%;
+    font-size: 40px;
+    left: 10%;
+    font-style: oblique;
+}
+
+.divInput label:nth-child(1){
+    position: relative;
+    top: 30px;
+    left: 13%;
+    font-size: 23px;
+    font-family: sans-serif;
+}
+.divInput input:nth-child(2){
+    position: relative;
+    top: 72px;
+    left: -7%;
+    padding: 9px;
+    width: 390px;
+    border-radius: 9px;
+    border-color:rgb(9, 0, 129);
+    box-sizing: border-box;
+    display: inline-block;
+    outline:none;
+}
+
+.divPassword label:nth-child(1){
+    position: relative;
+    top: 98px;
+    left: 13%;
+    font-size: 23px;
+    font-family: sans-serif;
+}
+.divPassword input:nth-child(2){
+    position: relative;
+    top: 110px;
+    left: 11%;
+    width: 390px;
+    padding: 9px;
+    border-radius: 9px;
+    border-color:rgb(9, 0, 129);
+    box-sizing: border-box;
+    display: inline-block;
+    outline:none;
+}
+
+.divInput input:valid{
+  outline:none;
+  border: 2px solid green;
+}
+
+.divInput input:focus:invalid{
+  outline:none;
+  border: 2px solid red;
+}
+
+.divSesion button{
+    position: relative;
+    width: 160px;
+    height: 55px;
+    top: 85px;
+    border-radius: 13px;
+    justify-content: center;    
+    left: 34%;
+    font-size: 30px;
+    border-color:rgb(9, 0, 129);
+    color: rgb(9, 0, 129);
+}
+
+.divSesion button:hover{
+    background: rgb(9, 0, 129);
+    color: white;
+}
+
+/*==============================================================\
+|                           Caja Copamex                        |
+\==============================================================*/
+
+.positionBox{
+    position: relative;
+    right: -84%;
+    top: -93%;
+}
+
+#box{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    transform-style: preserve-3d;
+    /* Fijo sin animacion */
+    /* transform: rotateX(-30deg) rotateY(45deg); */
+    /* Animacion de rotacion */
+    animation: animate alternate 10s linear infinite;
+  }
+  
+  @keyframes animate{
+    0%{
+      transform: rotateX(-30deg) rotateY(360deg);
+    }
+    100%{
+      transform: rotateX(-30deg) rotateY(0deg);
+    } 
+  }
+  
+  /* Sonbra en la caja // Tapa Caja  */
+  #box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #111;
+    transform: rotateX(90deg) translatez(20px);
+    filter: blur(15px);
+  }
+  
+  #box div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  #box div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #box div span:nth-child(1){
+    transform: rotateY(0deg) translate3d(0,0,30px);
+    background: #d8aa77;
+  }
+  #box div span:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    top: 22px;
+    width: 30px;
+    height: 30px;
+    background: url(img/Copamex.png); 
+    background-size: 27px;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  
+  #box div span:nth-child(2){
+    transform: rotateY(90deg) translate3d(0,0,30px);
+    background: #ca9864;
+  }
+  
+  #box div span:nth-child(3){
+    transform: rotateY(180deg) translate3d(0,0,30px);
+    background: #d8aa77;
+  }
+  
+  #box div span:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    top: 22px;
+    width: 30px;
+    height: 30px;
+    background: url(img/Copamex.png);
+    background-size: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #box div span:nth-child(4){
+    transform: rotateY(270deg) translate3d(0,0,30px);
+    background: #ca9864;
+  }
+  
+  #box div span:nth-child(4)::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    background: url(img/This_Side_Up.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+  }
+  
+  #box .top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #e8bb84;
+    display: flex;
+    align-items: center;
+    transform: rotateX(90deg) translate3d(0,0,30px);
+  }
+  
+  #box .top::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    background: #111 url(img/reciclado1.png);
+    background-size: 17px;
+  }
+  
+  .tape{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    width: 33px;
+    height: 12px;
+    background: #111 url(img/reciclado1.png);
+    background-size: 17px;
+    background-position-x: 59px;
+  }
+  
+  span:nth-child(4) .tape{
+    transform: translateX(-50%) rotate(270deg);
+    background-position-x: 30px;
+  }
+  
+  .boton{
+    height: 600px;
+    background: rgb(0, 0, 255);
+  }
+  
+  
+  .modal{
+    background-color: rgba(0, 0, 0,.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  /*
+  Ocultar Contraseña
+  */
+
+  .divPassword i:nth-child(1){
+    position: relative;
+    bottom: -67px;
+    left: 80%;
+  }
